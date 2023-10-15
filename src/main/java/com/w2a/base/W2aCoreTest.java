@@ -10,6 +10,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.naveenautomationlabs.core.WebDriverFactory;
+import com.naveenautomationlabs.products.endpoints.CodprogEndPoints;
+import com.w2a.endpoints.BankDemoSiteEndPoints;
 
 public class W2aCoreTest {
 		
@@ -17,12 +19,9 @@ public class W2aCoreTest {
 	public static WebDriver driver; //rn its null
 	public static Properties config;
 	public static FileInputStream fis;
+	public static String url;
 	
-	
-	
-	
-	
-	
+
 	@BeforeSuite
 	public void setup() throws IOException {
 			
@@ -35,12 +34,17 @@ public class W2aCoreTest {
 			
 			WebDriverFactory factory = new WebDriverFactory(browser);
 			driver = factory.createDriver();
+			
+			url = BankDemoSiteEndPoints.v3;
+			driver.get(config.getProperty("baseUrl")+ url);
 		}
 		}
 	
 	@AfterSuite
 	public void tearDown() {
-		
+		if(driver != null) {
+			driver.quit();
+		}
 	}
 	
 }
