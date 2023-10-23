@@ -1,35 +1,43 @@
 package com.w2a.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import com.naveenautomationlabs.core.WebDriverFactory;
-import com.naveenautomationlabs.products.endpoints.CodprogEndPoints;
 import com.w2a.endpoints.BankDemoSiteEndPoints;
 
 public class W2aCoreTest {
 		
 	
-	public static WebDriver driver; //rn its null
+	public static WebDriver driver;
 	public static Properties config;
 	public static FileInputStream fis;
 	public static String url;
-	
+	protected static Logger log;
 
 	@BeforeSuite
 	public void setup() throws IOException {
-			
+		LoggerContext context = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false);
+        File file = new File("/Users/jagriti.sharma/eclipse-jagriti/DataDrivenFramework/src/test/resources/properties/log4j2.properties");
+        context.setConfigLocation(file.toURI());
+        
+        log = LogManager.getLogger(W2aCoreTest.class);
+		
+	
 		if (driver == null) {
 			Properties config  = new Properties();
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+ "/src/test/resources/properties/Config.properties");
 			
 			config.load(fis);
+			log.debug("Config file has been loaded");
 			String browser = config.getProperty("browser");
 			
 			WebDriverFactory factory = new WebDriverFactory(browser);
@@ -37,6 +45,7 @@ public class W2aCoreTest {
 			
 			url = BankDemoSiteEndPoints.v3;
 			driver.get(config.getProperty("baseUrl")+ url);
+			log.info("Reaching the url...");
 		}
 		}
 	
