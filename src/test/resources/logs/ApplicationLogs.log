@@ -1,19 +1,36 @@
-21:09:23.489 [main] INFO  - Launching Chrome...
-21:09:33.249 [main] INFO  - Reaching the url...
-21:09:33.297 [main] INFO  - Verify all the elements are displayed
-[DEBUG] 2023-10-22 22:15:50.674 [main] W2aCoreTest - Config file has been loaded
-[INFO ] 2023-10-22 22:15:50.678 [main] W2aCoreTest - Launching Chrome...
-[INFO ] 2023-10-22 22:15:57.610 [main] W2aCoreTest - Reaching the url...
-[INFO ] 2023-10-22 22:15:57.661 [main] W2aCoreTest - Verify all the elements are displayed
-[DEBUG] 2023-10-22 22:27:55.876 [main] W2aCoreTest - Config file has been loaded
-[INFO ] 2023-10-22 22:27:55.879 [main] W2aCoreTest - Launching Chrome...
-[INFO ] 2023-10-22 22:28:07.119 [main] W2aCoreTest - Reaching the url...
-[INFO ] 2023-10-22 22:28:07.190 [main] W2aCoreTest - Verify all the elements are displayed
-[DEBUG] 2023-10-23 01:09:28.620 [main] W2aCoreTest - Config file has been loaded
-[INFO ] 2023-10-23 01:09:28.624 [main] W2aCoreTest - Launching Chrome...
-[INFO ] 2023-10-23 01:09:36.988 [main] W2aCoreTest - Reaching the url...
-[INFO ] 2023-10-23 01:09:37.014 [main] W2aCoreTest - Verify all the elements are displayed
-[DEBUG] 2023-10-23 01:16:52.441 [main] W2aCoreTest - Config file has been loaded
-[INFO ] 2023-10-23 01:16:52.445 [main] W2aCoreTest - Launching Chrome...
-[INFO ] 2023-10-23 01:16:59.874 [main] W2aCoreTest - Reaching the url...
-[INFO ] 2023-10-23 01:16:59.906 [main] W2aCoreTest - Verify all the elements are displayed
+[DEBUG] 2023-10-29 22:11:01.835 [main] W2aCoreTest - Config file has been loaded
+[INFO ] 2023-10-29 22:11:01.838 [main] W2aCoreTest - Launching Chrome...
+[INFO ] 2023-10-29 22:11:09.854 [main] W2aCoreTest - Reaching the url...
+[INFO ] 2023-10-29 22:11:09.877 [main] W2aCoreTest - This test has been started HomepageTest
+[INFO ] 2023-10-29 22:11:09.879 [main] W2aCoreTest - Verify all the elements are displayed
+[INFO ] 2023-10-29 22:11:10.139 [main] W2aCoreTest - This test has been successfully passed HomepageTest
+[INFO ] 2023-10-29 22:11:10.141 [main] W2aCoreTest - This test has been started loginTestWithInvalidUserID
+[INFO ] 2023-10-29 22:11:10.141 [main] W2aCoreTest - Verify login with invalid userID and password
+[INFO ] 2023-10-29 22:11:10.692 [main] W2aCoreTest - Accepting the alert
+[INFO ] 2023-10-29 22:11:10.698 [main] W2aCoreTest - Waiting for the page to reload
+[INFO ] 2023-10-29 22:11:11.596 [main] W2aCoreTest - This test has been successfully passed loginTestWithInvalidUserID
+[INFO ] 2023-10-29 22:11:11.597 [main] W2aCoreTest - This test has been started loginTestWithInvalidUserID
+[INFO ] 2023-10-29 22:11:11.597 [main] W2aCoreTest - Verify login with invalid userID and password
+[INFO ] 2023-10-29 22:11:13.542 [main] W2aCoreTest - Accepting the alert
+[INFO ] 2023-10-29 22:11:13.555 [main] W2aCoreTest - Waiting for the page to reload
+[INFO ] 2023-10-29 22:11:15.081 [main] W2aCoreTest - This test has been successfully passed loginTestWithInvalidUserID
+[INFO ] 2023-10-29 22:11:15.081 [main] W2aCoreTest - This test has been started loginTestWithValidCredentials
+[INFO ] 2023-10-29 22:11:15.081 [main] W2aCoreTest - Verify login with valid userID and password
+[INFO ] 2023-10-29 22:11:15.100 [main] W2aCoreTest - Entering valid UserId and Password
+[INFO ] 2023-10-29 22:11:16.542 [main] W2aCoreTest - This test has been successfully passed loginTestWithValidCredentials
+[INFO ] 2023-10-29 22:11:16.546 [main] W2aCoreTest - This test has been started FailTest
+[INFO ] 2023-10-29 22:11:16.546 [main] W2aCoreTest - This test will always fail because it expects Runtime Exception and we will not get any
+[INFO ] 2023-10-29 22:11:16.551 [main] W2aCoreTest - This test has failed FailTest
+[INFO ] 2023-10-29 22:11:16.552 [main] W2aCoreTest - This test has been started PassFailTest
+[INFO ] 2023-10-29 22:11:16.556 [main] W2aCoreTest - This test has been started PassFailTest
+[INFO ] 2023-10-29 22:11:16.558 [main] W2aCoreTest - This test has been started PassFailTest
+[INFO ] 2023-10-29 22:11:16.558 [main] W2aCoreTest - This test has been successfully passed PassFailTest
+[INFO ] 2023-10-29 22:11:16.559 [main] W2aCoreTest - This test has been started PassFailTest
+[INFO ] 2023-10-29 22:11:16.560 [main] W2aCoreTest - This test has been successfully passed PassFailTest
+[INFO ] 2023-10-29 22:11:16.560 [main] W2aCoreTest - This test has been started PassFailTest
+[INFO ] 2023-10-29 22:11:16.561 [main] W2aCoreTest - This test has been successfully passed PassFailTest
+[INFO ] 2023-10-29 22:11:16.562 [main] W2aCoreTest - This test has been started PassTest
+[INFO ] 2023-10-29 22:11:16.562 [main] W2aCoreTest - This test will always fail because it expects Runtime Exception and we will not get any
+[INFO ] 2023-10-29 22:11:16.563 [main] W2aCoreTest - This test has been successfully passed PassTest
+[INFO ] 2023-10-29 22:11:16.563 [main] W2aCoreTest - This test has been started SkipTest
+[INFO ] 2023-10-29 22:11:16.564 [main] W2aCoreTest - This test has been skipped test.web.SampleTest/SkipTest

@@ -25,8 +25,10 @@ public class W2aCoreTest {
 
 	@BeforeSuite
 	public void setup() throws IOException {
+		String currentDir = System.getProperty("user.dir");
+		
 		LoggerContext context = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false);
-        File file = new File("/Users/jagriti.sharma/eclipse-jagriti/DataDrivenFramework/src/test/resources/properties/log4j2.properties");
+        File file = new File(currentDir +"/src/test/resources/properties/log4j2.properties");
         context.setConfigLocation(file.toURI());
         
         log = LogManager.getLogger(W2aCoreTest.class);
@@ -34,7 +36,7 @@ public class W2aCoreTest {
 	
 		if (driver == null) {
 			Properties config  = new Properties();
-			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+ "/src/test/resources/properties/Config.properties");
+			FileInputStream fis = new FileInputStream(currentDir + "/src/test/resources/properties/Config.properties");
 			
 			config.load(fis);
 			log.debug("Config file has been loaded");

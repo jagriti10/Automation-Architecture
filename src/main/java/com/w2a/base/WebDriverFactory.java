@@ -42,6 +42,7 @@ public class WebDriverFactory extends W2aCoreTest {
 	        FirefoxOptions options = new FirefoxOptions();
 	        options.addArguments("--start-maximized");
 	        driver.set(new FirefoxDriver(options));
+	        break;
 		}
 		}
 		return driver.get();
