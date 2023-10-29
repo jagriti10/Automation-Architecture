@@ -12,7 +12,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.w2a.endpoints.BankDemoSiteEndPoints;
+import com.w2a.utilies.ExtentFileReporter;
 
 public class W2aCoreTest {
 		
@@ -22,9 +24,13 @@ public class W2aCoreTest {
 	public static FileInputStream fis;
 	public static String url;
 	protected static Logger log;
+	public static ExtentReports report;
 
 	@BeforeSuite
 	public void setup() throws IOException {
+		
+		report = ExtentFileReporter.getInstance();
+		
 		String currentDir = System.getProperty("user.dir");
 		
 		LoggerContext context = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false);
@@ -56,6 +62,7 @@ public class W2aCoreTest {
 		if(driver != null) {
 			driver.quit();
 		}
+		report.flush();
 	}
 	
 }
