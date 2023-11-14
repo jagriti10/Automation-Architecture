@@ -3,6 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="test.web.SampleTest"/>
       <class name="test.web.LoginTest"/>
     </classes>
   </test> <!-- Test -->

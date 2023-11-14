@@ -14,6 +14,8 @@ public class HomePage {
     public static final By PASSWORD_LABEL = By.xpath("//input[@name='password']/parent::td/preceding-sibling::td[contains(text(),'Password')]");
     public static final By LOGIN_BTN = By.xpath("//input[@name='btnLogin']");
     public static final By RESET_BTN = By.xpath("//input[@name='btnReset']");
+    
+    public static final By WELCOME_LABEL = By.xpath("//marquee[contains(text(),concat(\"Welcome To Manager\",\"'\",\"s Page of Guru99 Bank\"))]");
 
 
 }
