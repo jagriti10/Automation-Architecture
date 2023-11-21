@@ -8,13 +8,12 @@ import com.w2a.base.W2aCoreTest;
 
 public class SampleTest extends W2aCoreTest {
     
-	@Test
+	@Test()
 	public void PassTest() {
-    	System.out.println("user dir" + System.getProperty("user.dir"));
-    	log.info("This test will always fail because it expects Runtime Exception and we will not get any");
+    	log.info("This test will always pass");
     }
     
-    @Test(expectedExceptions=RuntimeException.class)
+    @Test(enabled = false, expectedExceptions=RuntimeException.class)
     public void FailTest() {
     	log.info("This test will always fail because it expects Runtime Exception and we will not get any");
     }

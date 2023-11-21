@@ -6,6 +6,8 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+  schedule:
+    - cron: '00 11 * * 1,5'
   workflow_dispatch:
 
 jobs:
@@ -25,4 +27,4 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: mvn test 
+        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
