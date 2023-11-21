@@ -28,12 +28,3 @@ jobs:
 
       - name: Run tests
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
-
-      - name: Report results
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: Web Tests
-          path: target/surefire-reports/testng-results.xml
-          reporter: java-junit
-          fail-on-error: true
