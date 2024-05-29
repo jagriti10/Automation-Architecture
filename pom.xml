@@ -122,7 +122,6 @@
 						<suiteXmlFiles>
 							<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
-                    </includes>
 					</properties>
 				</configuration>
 			</plugin>
