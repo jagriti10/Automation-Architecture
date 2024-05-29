@@ -18,7 +18,7 @@ public class AmountBuilder {
 	
 	public AmountBuilder withValue(String value) {
 		amount.setValue(value);
-		return this;                              
+		return this;  
 	}
 	
 	public Amount build() {return this.amount;}

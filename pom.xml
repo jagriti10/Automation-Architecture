@@ -122,8 +122,6 @@
 						<suiteXmlFiles>
 							<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
-						<includes>
-                        <include>**/AutTest.java</include>
                     </includes>
 					</properties>
 				</configuration>
