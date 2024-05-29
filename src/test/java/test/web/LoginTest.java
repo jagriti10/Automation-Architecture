@@ -2,12 +2,16 @@ package test.web;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,7 +24,7 @@ public class LoginTest extends W2aCoreTest {
 
 	@Test
 	public void HomepageTest() {
-
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		log.info("Verify all the elements are displayed");
 		Assert.assertTrue(driver.findElement(HomePage.LOGO).isDisplayed());
 		Assert.assertTrue(driver.findElement(HomePage.USERID_LABEL).isDisplayed());
@@ -33,8 +37,10 @@ public class LoginTest extends W2aCoreTest {
 
 	@DataProvider()
 	public Object[][] invalidCredentials() {
-		log.trace("In the data provider");
-		return new Object[][] { { HomePage.USERID_INPUT }, { HomePage.PASSWORD_INPUT } };
+		log.info("In the data provider");
+		return new Object[][] {
+			{ HomePage.USERID_INPUT }, 
+			{ HomePage.PASSWORD_INPUT } };
 	}
 
 
@@ -56,12 +62,14 @@ public class LoginTest extends W2aCoreTest {
 
 		log.info("Waiting for the page to reload");
 		new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(driver.findElement(HomePage.USERID_LABEL)));
+	
 	}
 
 	@Test
-	public void loginTestWithValidCredentials() {
+	public void loginTestWithValidCredentials() throws InterruptedException {
 		log.info("Verify login with valid userID and password");
-
+	
+		
 		WebElement userId_input = driver.findElement(HomePage.USERID_INPUT);
 		WebElement password_input = driver.findElement(HomePage.PASSWORD_INPUT);
 

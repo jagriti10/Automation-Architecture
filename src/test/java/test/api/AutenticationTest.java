@@ -34,16 +34,18 @@ public class AutenticationTest {
 	public void AuthTest() {
 		RestAssured.baseURI= "https://api-m.sandbox.paypal.com";
 
+		
 		baseReq =  RestAssured.given()
 			.auth().preemptive().basic(clientId, clientSecret)
 			.headers("Content-Type", ContentType.URLENC)
 			.formParam("grant_type", "client_credentials");
 		
 		ValidatableResponse authReq = baseReq
-		.when().log().all().post("/v1/oauth2/token")
+		.when().post("/v1/oauth2/token")
 	    .then().assertThat().statusCode(200);
 		
         System.out.println("Access Token: " + authReq.extract().jsonPath().getString("access_token"));
+	
 	}
 	
 	@Test
@@ -82,6 +84,7 @@ public class AutenticationTest {
 	private OrderBuilder orderObject() {
 		List<PurchaseUnits> purchaseUnits = new ArrayList<>();
 		UUID uuid = UUID.randomUUID();
+		
 		purchaseUnits.add(PurchaseUnitsBuilder
 				.withReferenceId(uuid.toString())
 				.withAmount(AmountBuilder.withcurrencyCode("USD")
